@@ -37,7 +37,7 @@ Or, set up a conda env and install python 3.8 and sompile in the env.
 ## Psi4-v1.6
 Requirement:
 ```bash
-Python >=3.8, gcc/g++ >= 8.1, Lapack (MKL recommended), Eigen3 (required by Libint2)
+Cmake >= 3.15, Python >=3.8, gcc/g++ >= 8.1, Lapack (MKL recommended), Eigen3 (required by Libint2)
 ```
 
 Install Eigen3
