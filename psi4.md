@@ -16,6 +16,24 @@ $ python3.8 -m pip install numpy # this is needed for psi4-v1.6
 
 Or, set up a conda env and install python 3.8 and sompile in the env.
 
+## other packages:
+```bash
+#  <<<  Required build dependencies that Psi4 can't build itself  >>>
+#
+#    - CMake (e.g., `conda install cmake`)
+#    - C++ and C compilers (C++17 compliant)
+#    - BLAS/LAPACK (also runtime; e.g., `conda install mkl-devel`)
+#    - Python (also runtime; interpreter and headers; e.g., `conda install python`)
+#    - NumPy (also runtime; avoidable at buildtime if gau2grid pre-built; e.g., `conda install numpy`)
+#    - networkx >=2.4 (runtime only; e.g., `conda install networkx`)
+#    - pint >=0.10 (runtime only; e.g., `conda install pint -c conda-forge`)
+#    - pydantic >=1.0 (runtime only; e.g., `conda install pydantic -c conda-forge`)
+#    - msgpack-python (runtime only; e.g., `conda install msgpack-python`)
+#    - Eigen (for Libint2; e.g., `conda install eigen`)
+#    - SciPy (runtime only; e.g., `conda install scipy`)
+```
+
+
 ## Psi4-v1.6
 Requirement:
 ```bash
@@ -42,5 +60,6 @@ cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-master/compile-psi4" \
         -DOpenMP_LIBRARY_DIRS=/home/michaelbishop/softwares/openmpi/openmpi-3.1.3/mpi_gnu830/lib/
 
 ```
+
 
 
