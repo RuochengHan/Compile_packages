@@ -14,6 +14,9 @@ $  sudo make altinstall
 $ python3.8 -m pip install numpy # this is needed for psi4-v1.6
 ```
 
+Or, set up a conda env and install python 3.8 and sompile in the env.
+
 ## Psi4-v1.6
+
 
 
