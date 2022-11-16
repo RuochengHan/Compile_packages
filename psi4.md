@@ -56,10 +56,16 @@ cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-master/compile-psi4" \
         -DCMAKE_CXX_COMPILER=/opt/gcc/8.3.0/bin/g++ \
         -DCMAKE_Fortran_COMPILER=/opt/gcc/8.3.0/bin/gfortran \
         -DLAPACK_LIBRARIES=/home/michaelbishop/softwares/openblas/openmpi-3.1.3-gnu-8.3.0/lib/libopenblas.a \
-        -DLAPACK_INCLUDE_DIRS=/home/michaelbishop/softwares/openblas/openmpi-3.1.3-gnu-8.3.0/include \
-        -DOpenMP_LIBRARY_DIRS=/home/michaelbishop/softwares/openmpi/openmpi-3.1.3/mpi_gnu830/lib/
+        -DLAPACK_INCLUDE_DIRS=/home/michaelbishop/softwares/openblas/openmpi-3.1.3-gnu-8.3.0/include 
 
 ```
+Failed... Because Libint2_FOUND problem...
 
+## Psi4-v1.3.2
+This version does not require Libint2, only Libint
 
+We can use Conda to intall some required packages:
+```bash
+conda install python 3.8 mkl-devel numpy
+```
 
