@@ -70,3 +70,7 @@ $ conda install python3.8 mkl-devel numpy networkx msgpack-python mpfr eigen # (
 $ conda install -c conda-forge openmp pydantic pint deepdiff # (deepdiff need for v1.3.3)
 ```
 
+Prepare a do-configure file:
+```bash
+
+```
