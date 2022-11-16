@@ -66,7 +66,7 @@ This version does not require Libint2, only Libint
 
 We can use Conda to intall some required packages:
 ```bash
-$ conda install python3.8 mkl-devel numpy networkx msgpack-python mpfr eigen (cmake)
-$ conda install -c conda-forge openmp pydantic pint 
+$ conda install python3.8 mkl-devel numpy networkx msgpack-python mpfr eigen # ( and cmake)
+$ conda install -c conda-forge openmp pydantic pint deepdiff # (deepdiff need for v1.3.3)
 ```
 
