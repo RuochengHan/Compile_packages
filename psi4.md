@@ -70,7 +70,7 @@ $ conda install python3.8 mkl-devel numpy networkx msgpack-python mpfr eigen # (
 $ conda install -c conda-forge openmp pydantic pint deepdiff # (deepdiff need for v1.3.3)
 ```
 
-Prepare a do-configure file:
+Prepare a do-configure file: (Conda-mkl)
 ```bash
 cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/compile-psi4" \
         -DCMAKE_INSTALL_PREFIX="/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/install-psi4" \
@@ -83,9 +83,19 @@ cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/compile-psi4" \
         -DCMAKE_Fortran_COMPILER=/opt/gcc/8.3.0/bin/gfortran \
         -DBLAS_TYPE=MKL \
         -DLAPACK_TYPE=MKL \
-        -DBLAS_LIBRARIES=/home/michaelbishop/anaconda3/pkgs/mkl-2020.2-256 \
-        -DLAPACK_LIBRARIES=/home/michaelbishop/anaconda3/pkgs/mkl-2020.2-256 \ # need to set root-dir rather than /lib, use GNU lapack will not be good in multithreading, intel-mkl not tested
-        -DBLAS_INCLUDE_DIRS=/home/michaelbishop/anaconda3/envs/psi4mod/include/ \ 
-        -DLAPACK_INCLUDE_DIRS=/home/michaelbishop/anaconda3/envs/psi4mod/include/ \ # need to be set otherwise cannot find mkl.h file, no include/ in env folder
-        -DOpenMP_LIBRARY_DIRS=/home/michaelbishop/anaconda3/envs/psi4mod/lib/ # need to set /lib
+        -DBLAS_LIBRARIES=/home/michaelbishop/anaconda3/envs/psi4mod/lib/libmkl_rt.so \
+        -DLAPACK_LIBRARIES=/home/michaelbishop/anaconda3/envs/psi4mod/lib/libmkl_rt.so \ # Conda-mkl
+        -DBLAS_INCLUDE_DIRS=/home/michaelbishop/anaconda3/envs/psi4mod/include/ \
+        -DLAPACK_INCLUDE_DIRS=/home/michaelbishop/anaconda3/envs/psi4mod/include/ \
+        -DOpenMP_LIBRARY_DIRS=/home/michaelbishop/anaconda3/envs/psi4mod/lib/
 ```
+Above is the one conda-psi4 uses, and is the quickest.
+
+Intel-mkl:
+
+
+This actually is intel-mkl
+```bash
+        -DLAPACK_LIBRARIES=/home/michaelbishop/anaconda3/pkgs/mkl-2020.2-256 
+```
+
