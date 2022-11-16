@@ -92,10 +92,34 @@ cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/compile-psi4" \
 Above is the one conda-psi4 uses, and is the quickest.
 
 Intel-mkl:
+```bash
+cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/compile-psi4" \
+        -DCMAKE_INSTALL_PREFIX="/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/install-psi4-intelmkl" \
+        -DCMAKE_PREFIX_PATH="/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/install-psi4-intelmkl/externals/install-libint" \
+        -DMAX_AM_ERI=6 \
+        -DENABLE_gdma=ON \
+        -DBUILD_SHARED_LIBS=ON \
+        -DCMAKE_C_COMPILER=/opt/gcc/8.3.0/bin/gcc \
+        -DCMAKE_CXX_COMPILER=/opt/gcc/8.3.0/bin/g++ \
+        -DCMAKE_Fortran_COMPILER=/opt/gcc/8.3.0/bin/gfortran \
+        -DBLAS_TYPE=MKL \
+        -DLAPACK_TYPE=MKL \
+        -DBLAS_LIBRARIES=/opt/intel/mkl/lib/intel64/libmkl_rt.so \
+        -DLAPACK_LIBRARIES=/opt/intel/mkl/lib/intel64/libmkl_rt.so \ # Intel-mkl
+        -DBLAS_INCLUDE_DIRS=/opt/intel/mkl/include/ \
+        -DLAPACK_INCLUDE_DIRS=/opt/intel/mkl/include/ \
+        -DOpenMP_LIBRARY_DIRS=/opt/intel/compilers_and_libraries_2020.3.279/linux/compiler/lib/intel64/
+```
+~3 times slower than Conda-mkl
 
-
-This actually is intel-mkl
+This actually is Intel-mkl, though in conda:
 ```bash
         -DLAPACK_LIBRARIES=/home/michaelbishop/anaconda3/pkgs/mkl-2020.2-256 
 ```
 
+GNU lapack even slower...
+
+# Attention:
+1. Avoid LAPACK_INCLUDE and LAPACK_LIB point out to different version of MKL, will leads to error
+2. prepend-path PATH LIBRARY in the module
+3. Intel-mkl somehow regardless of how many cores set, always use all logic cores.
