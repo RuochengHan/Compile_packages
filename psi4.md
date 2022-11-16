@@ -66,6 +66,7 @@ This version does not require Libint2, only Libint
 
 We can use Conda to intall some required packages:
 ```bash
-conda install python 3.8 mkl-devel numpy
+$ conda install python 3.8 mkl-devel numpy 
+$ conda install -c conda-forge openmp
 ```
 
