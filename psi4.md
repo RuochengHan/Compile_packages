@@ -110,7 +110,7 @@ cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-1.3.x/compile-psi4" \
         -DLAPACK_INCLUDE_DIRS=/opt/intel/mkl/include/ \
         -DOpenMP_LIBRARY_DIRS=/opt/intel/compilers_and_libraries_2020.3.279/linux/compiler/lib/intel64/
 ```
-~3 times slower than Conda-mkl
+~4 times slower than Conda-mkl
 
 This actually is Intel-mkl, though in conda:
 ```bash
