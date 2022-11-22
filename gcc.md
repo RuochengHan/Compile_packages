@@ -1,0 +1,18 @@
+Get source from https://ftp.gnu.org/gnu/gcc/
+```bash
+$ ./configure --prefix=/home/michaelbishop/softwares/gcc/gcc-12.2.0/install --disable-multilib # only 64bit
+$ make -j 16
+$ make install
+```
+
+Create module file
+```bash
+#%Module
+set GCC /home/michaelbishop/softwares/gcc/gcc-12.2.0/install
+
+prepend-path PATH               $GCC/bin
+prepend-path LIBRARY_PATH       $GCC/lib64
+prepend-path LD_LIBRARY_PATH    $GCC/lib64
+prepend-path LD_RUN_PATH        $GCC/lib64
+prepend-path MANPATH            $GCC/share/man
+```
