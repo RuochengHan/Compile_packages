@@ -62,11 +62,13 @@ cmake -S. -B"/home/michaelbishop/softwares/psi4_mod/psi4-master/compile-psi4" \
 Failed... Because Libint2_FOUND problem...
 
 ## Psi4-v1.3.2
+This version still requires python 3.8.
 This version does not require Libint2, only Libint
 
 We can use Conda to intall some required packages:
 ```bash
-$ conda install python3.8 mkl-devel numpy networkx msgpack-python mpfr eigen # ( and cmake)
+$ conda install python=3.8
+$ conda install mkl-devel numpy networkx msgpack-python mpfr eigen # ( and cmake)
 $ conda install -c conda-forge openmp pydantic pint deepdiff # (deepdiff need for v1.3.2)
 ```
 
