@@ -69,7 +69,7 @@ We can use Conda to intall some required packages:
 ```bash
 $ conda install -c conda-forge libstdcxx-ng=12
 $ conda install python=3.8
-$ conda install mkl-devel numpy networkx msgpack-python mpfr eigen # ( and cmake)
+$ conda install mkl-devel numpy=1.20 networkx msgpack-python mpfr eigen # ( and cmake)
 $ conda install -c conda-forge openmp pydantic pint deepdiff # (deepdiff need for v1.3.2)
 ```
 
