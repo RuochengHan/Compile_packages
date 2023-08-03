@@ -16,3 +16,9 @@ prepend-path LD_LIBRARY_PATH    $GCC/lib64
 prepend-path LD_RUN_PATH        $GCC/lib64
 prepend-path MANPATH            $GCC/share/man
 ```
+
+### 5.4.0
+```bash
+wget https://ftp.gnu.org/gnu/gcc/gcc-5.4.0/gcc-5.4.0.tar.gz
+
+```
