@@ -26,6 +26,8 @@ conda install pyparsing
 ```bash
 module load
 CMakeLists.txt: set OPENMP ON
-
+./configure-cmake --compiler gnu --opt normal --openblas /home/michaelbishop/softwares/openblas/gnu-11.3.0/ --omp -j 12 --prefix /home/michaelbishop/softwares/openmolcas/openmolcas_20230806-openblas0.3.10-gnu11.3.0-20230806
 ./make-gnu_normal_omp_openblas
+cd builds/gnu_normal_omp_openblas/
+make intall
 ```
