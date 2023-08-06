@@ -13,6 +13,6 @@ make install
 wget https://sourceforge.net/projects/openblas/files/v0.3.10/OpenBLAS%200.3.10%20version.zip/download
 unzip download
 
-make FC=gfortran CC=gcc USE_THREAD=0
+make FC=gfortran CC=gcc USE_THREAD=0 INTERFACE64=1
 make PREFIX=/home/michaelbishop/softwares/openblas/gnu-11.3.0 install
 ```
