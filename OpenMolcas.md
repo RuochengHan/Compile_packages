@@ -16,3 +16,8 @@ unzip download
 make FC=gfortran CC=gcc USE_THREAD=0 INTERFACE64=1
 make PREFIX=/home/michaelbishop/softwares/openblas/gnu-11.3.0 install
 ```
+
+### pyparsing
+```bash
+conda install pyparsing
+```
