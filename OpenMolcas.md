@@ -21,3 +21,11 @@ make PREFIX=/home/michaelbishop/softwares/openblas/gnu-11.3.0 install
 ```bash
 conda install pyparsing
 ```
+
+### OpenMolcas 20230806
+```bash
+module load
+CMakeLists.txt: set OPENMP ON
+
+./make-gnu_normal_omp_openblas
+```
