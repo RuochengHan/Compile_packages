@@ -15,7 +15,7 @@ Materials Studio configuration failed
 ```
 
 ```bash
-$ cd $HOME/Accelrys/LicensePack/etc/lp_echovars
+$ cd $HOME/Accelrys/LicensePack/etc
 $ ./lp_config
 $ ./lp_echovars
 ```
