@@ -26,7 +26,7 @@ $ ./install
 
 Run Gateway
 ```bash
-https://blog.csdn.net/qq_40481843/article/details/123400600
+Accelrys/MaterialsStudio8.0/etc/Gateway/msgateway_control_18888
 ```
 
 Reference:
