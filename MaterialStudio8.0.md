@@ -8,7 +8,7 @@ $ sudo apt-get install csh rpm2cpio
 ./install
 ```
 
-Until error message: 
+If error message: 
 ```bash
 Couldn't get environment information from lp_echovars: -1 at /home/ms-test/Accelrys/MaterialsStudio8.0/share/Install/Scripts/MSConfig.pm line 296.
 Materials Studio configuration failed
@@ -28,6 +28,12 @@ Run Gateway
 ```bash
 Accelrys/MaterialsStudio8.0/etc/Gateway/msgateway_control_18888
 ```
+
+install license:
+```
+lp_install /home/michaelbishop/Accelrys/Licens
+```
+
 
 Reference:
 1. https://www.freesion.com/article/7690395760/
