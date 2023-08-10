@@ -29,9 +29,10 @@ Run Gateway
 Accelrys/MaterialsStudio8.0/etc/Gateway/msgateway_control_18888
 ```
 
+mv licenses to /home/michaelbishop/Accelrys/Licenses/
 install license:
 ```
-lp_install /home/michaelbishop/Accelrys/Licens
+lp_install /home/michaelbishop/Accelrys/Licenses/...
 ```
 
 
