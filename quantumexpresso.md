@@ -31,4 +31,4 @@ $ make -j 12 all
 $ make install
 ```
 
-Note: if facing error in Wannier90 in bash```make -j 12 all```, just make all again 
+Note: if facing error in Wannier90 in bash```make -j 12 all```, just bash```make all``` again 
