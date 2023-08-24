@@ -7,7 +7,7 @@ ver. 12.2
 ## NVIDIA hpc-sdk
 https://developer.nvidia.com/hpc-sdk-downloads
 CUDA ver. 12.2 11.8 11.0. Install version.
-Include MPI (mpicc mpif90 rtc.) and other neccesary packages.
+Include MPI (mpicc mpif90 rtc.), blas, lapack and other necessary packages.
 ```bash
 $ wget https://developer.download.nvidia.com/hpc-sdk/23.7/nvhpc_2023_237_Linux_x86_64_cuda_multi.tar.gz
 $ tar xpzf nvhpc_2023_237_Linux_x86_64_cuda_multi.tar.gz
