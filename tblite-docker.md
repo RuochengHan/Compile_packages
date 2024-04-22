@@ -21,3 +21,5 @@ meson install -C _build
 export PATH=$PATH:/root/.local/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.local/lib/x86_64-linux-gnu
 ```
+
+Image continuumio/miniconda3 (python3.9) not work: IN python-api build, python not found...
