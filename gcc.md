@@ -24,7 +24,7 @@ wget https://ftp.gnu.org/gnu/gcc/gcc-5.4.0/gcc-5.4.0.tar.gz
 ./contrib/download_prerequisites # automatically download required GMP, MPFR and MPC.
 ```
 
-### 5.4.0
+### 8.3.0 on ubuntu 22.04
 ```bash
 wget https://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz
 ./contrib/download_prerequisites # automatically download required GMP, MPFR and MPC.
