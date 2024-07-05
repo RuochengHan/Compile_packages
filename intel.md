@@ -6,3 +6,14 @@ sudo sh ./l_BaseKit_p_2024.2.0.634_offline.sh -a --silent --cli --eula accept --
 ```
 
 Same for HPC Kit for intel ifort instal
+
+Then go to the installed folder
+```bash
+cd /home/michaelbishop/softwares/intel
+sh modulefiles-setup.sh
+```
+
+Move folder to the module location:
+```bash
+mv /home/michaelbishop/modulefiles /usr/share/module/modulefiles/intel/
+```
